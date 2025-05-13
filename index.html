@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockUp - Менеджер паролей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo-and-title">
+            <img src="logo.png" alt="Логотип LockUp" class="logo">
+            <h1 class="app-name">LockUp</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="#home" class="menu-link">Главная</a></li>
+                <li class="menu-item"><a href="about.html" class="menu-link">О приложении</a></li>
+                <li class="menu-item"><a href="contact.html" class="menu-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/GottaGrizzly" class="creator-link" target="_blank">
+            GottaGrizzly
+    </a>
+    </header>
+        <style>
+        .logo-and-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-name {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .app-name {
+            /* Удаляем стандартный цвет текста */
+            color: transparent;
+
+        /* Градиентный фон */
+        background: linear-gradient(
+            90deg,
+            #ff004c, /* Красный */
+            #ff6f00, /* Оранжевый */
+            #ffea00, /* Жёлтый */
+            #43ff00, /* Зелёный */
+            #00f2ff, /* Голубой */
+            #8d00ff, /* Фиолетовый */
+            #ff004c  /* Возвращаемся к красному */
+        );
+        background-size: 400% 400%;
+        
+        /* Отображаем градиент как текст */
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        animation: gradientShift 7s linear infinite;
+        }
+        </style>
+    <main class="main-content">
+        <h2>Управляйте своими паролями безопасно и просто</h2>
+        <p class="description">
+        </p>
+        <button class="download-button">
+    <div class="icon">
+        <img src="download_icon.png" alt="Иконка скачивания" class="download-icon" width="24" height="24">
+    </div>
+    <span class="label">Скачать</span>
+    <div class="loading"></div>
+</button>
+<style>
+/* Стиль кнопки "Скачать" */
+.download-button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  border: 2px solid #282828;
+  border-radius: 5px;
+  background-color: #212121;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.2s;
+}
+
+.download-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: 1;
+  transition:
+    top 0.5s ease-in-out,
+    bottom 0.5s ease-in-out;
+}
+
+.download-button:hover::before {
+  top: 0;
+  bottom: 0;
+}
+
+.download-button:hover {
+  background-color: #465243;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.download-button .icon {
+  position: absolute;
+  left: 20px;
+  z-index: 10;
+}
+
+.download-button .label {
+  position: relative;
+  z-index: 10;
+}
+
+.download-button .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    -225deg,
+    #ff7402 0%,
+    #ffe700 50%,
+    #fff55e 100%
+  );
+  filter: blur(20px);
+  z-index: -1;
+  animation: animate 0.8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+    </main>
+</body>
+</html>

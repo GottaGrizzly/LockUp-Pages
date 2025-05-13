@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фиксируем фон при скролле */
+    color: #333; /* Цвет текста для контраста */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Чёрный с 50% прозрачностью */
+    z-index: -1;
+}
+
+/* Шапка */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.app-name {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+
+.menu-item {
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0;
+}
+
+.menu-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Основной контент */
+.main-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff !important;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fff !important;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}
+
+.download-icon {
+    margin-right: 5px;
+}
+
+/* Форма контактов */
+.contact-form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 600px;
+    color: #fff !important;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.email-contact {
+    font-size: 1.1em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.features-container section {
+    flex: 1;
+    min-width: 280px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    color: #000 !important;
+}
+
+.features-container h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.features-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-container li {
+    margin: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.features-container li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+}
+
+/* Стили для никнейма */
+.creator-link {
+    margin-left: auto;
+    font-size: 16px;
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #ff004c, /* Красный */
+        #ff6f00, /* Оранжевый */
+        #ffea00, /* Жёлтый */
+        #43ff00, /* Зелёный */
+        #00f2ff, /* Голубой */
+        #8d00ff, /* Фиолетовый */
+        #ff004c  /* Возвращаемся к красному */
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientShift 7s linear infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | LockUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo-and-title">
+            <img src="logo.png" alt="Логотип LockUp" class="logo">
+            <h1 class="app-name">LockUp</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="index.html" class="menu-link">Главная</a></li>
+                <li class="menu-item"><a href="#about" class="menu-link">О приложении</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+        <style>
+        .logo-and-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-name {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .app-name {
+            /* Удаляем стандартный цвет текста */
+            color: transparent;
+
+        /* Градиентный фон */
+        background: linear-gradient(
+            90deg,
+            #ff004c, /* Красный */
+            #ff6f00, /* Оранжевый */
+            #ffea00, /* Жёлтый */
+            #43ff00, /* Зелёный */
+            #00f2ff, /* Голубой */
+            #8d00ff, /* Фиолетовый */
+            #ff004c  /* Возвращаемся к красному */
+        );
+        background-size: 400% 400%;
+        
+        /* Отображаем градиент как текст */
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        animation: gradientShift 7s linear infinite;
+        }
+        </style>
+    <div class="contact-form">
+        <h3>Связь с разработчиком:</h3>
+        <p><a href="mailto:gottagrizzlyproject@tuta.io" class="email-contact">gottagrizzlyproject@tuta.io</a></p>
+    </div>
+</body>
+</html>
