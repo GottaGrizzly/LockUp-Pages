@@ -83,18 +83,6 @@ body::before {
     color: #fff !important;
 }
 
-.download-button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-}
-
 .download-button:hover {
     background-color: #45a049;
 }
